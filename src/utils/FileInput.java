@@ -1,7 +1,7 @@
 package utils;
 
 import edu.princeton.cs.introcs.In;
-import models.Node;
+import models.Huffman;
 
 import java.io.File;
 import java.io.PipedInputStream;
@@ -15,11 +15,11 @@ public class FileInput {
 
 
 
-    public List<Node> loadData(String filename) throws Exception{
+    public List<Huffman.Node> loadData(String filename) throws Exception{
         File file = new File(filename);
         In in = new In(file);
 
-        List<Node> nodes = new ArrayList<>();
+        List<Huffman.Node> nodes = new ArrayList<>();
         while(!in.isEmpty()){
             String details = in.readLine();
 
