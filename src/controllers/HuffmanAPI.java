@@ -3,6 +3,9 @@ package controllers;
 import models.Data;
 import utils.FileInput;
 
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.List;
 
 /**
@@ -19,6 +22,7 @@ public class HuffmanAPI {
     public static void main(String[] args) throws Exception {
         prime();
         System.out.println(dataString);
+        write(dataString);
     }
 
     public static void prime() throws Exception{
@@ -27,5 +31,12 @@ public class HuffmanAPI {
         for(Data data : d){
             dataString = dataString + data;
         }
+    }
+
+    public static void write(String s) throws Exception{
+        final OutputStream os = new FileOutputStream("././data/result");
+        final PrintStream ps = new PrintStream(os);
+        ps.print(s);
+        ps.close();
     }
 }
