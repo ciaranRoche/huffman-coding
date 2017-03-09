@@ -1,10 +1,9 @@
 package utils;
 
 import edu.princeton.cs.introcs.In;
-import models.Huffman;
+import models.Data;
 
 import java.io.File;
-import java.io.PipedInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,16 +14,16 @@ public class FileInput {
 
 
 
-    public List<Huffman.Node> loadData(String filename) throws Exception{
+    public List<Data> loadData(String filename) throws Exception{
         File file = new File(filename);
         In in = new In(file);
-
-        List<Huffman.Node> nodes = new ArrayList<>();
+        String d = "";
+        List<Data> data = new ArrayList<>();
         while(!in.isEmpty()){
             String details = in.readLine();
-
-
+            d = d + details;
+            data.add(new Data(d));
         }
-        return nodes;
+        return data;
     }
 }
