@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Data;
+import models.Huffman;
 import utils.FileInput;
 
 import java.io.FileOutputStream;
@@ -9,14 +10,15 @@ import java.io.PrintStream;
 import java.util.List;
 
 /**
- * Created by muldoon on 09/03/17.
+ * Created by Ciaran Roche on 09/03/17.
  */
 public class HuffmanAPI {
 
+    Huffman huff;
     public static String dataString = "";
 
     public HuffmanAPI(){
-
+        huff = new Huffman();
     }
 
     public static void main(String[] args) throws Exception {

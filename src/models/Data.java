@@ -1,7 +1,7 @@
 package models;
 
 /**
- * Created by muldoon on 09/03/17.
+ * Created by Ciaran Roche on 09/03/17.
  */
 public class Data {
     private String data;
